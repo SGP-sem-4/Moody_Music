@@ -18,7 +18,7 @@
     </div>
     <ul>
       <li class="items"><a href="/">Home</a></li>
-      <li class="items"><a href="#">Face Came</a></li>
+      <li class="items"><a href="{{ url_for('video_feed') }}">Face Came</a></li>
       <li class="items"><a href="#">About</a></li>
     </ul>
     <div id="signup">
@@ -28,8 +28,8 @@
     </div>
   </header>
   <main>
-    <div class="card">
-      <div id="card1">
+    <div class="background" >
+      <!-- <div id="card1">
         <div id="Tag1">
           <h3>Retro Music</h3>
         </div>
@@ -39,10 +39,14 @@
       </div>
 
       <div id="card3">
+      </div> -->
+      <div class="headline">
+        <h1>Moody Music</h1>
+        <h4>Feel the music..!</h4>
       </div>
-
     </div>
   </main>
+  <script src="../static/js/clint.js" type="text/javascript"></script>
 </body>
 
 </html>
