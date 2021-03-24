@@ -12,6 +12,7 @@
 :root{
     --navbar-height: 60px;
     --font-fancy-1: 'Indie Flower', cursive;
+    --font-fancy-2: 'Pangolin', cursive;
 }
 
 /* Navigation Bar */
@@ -23,7 +24,7 @@
     display: flex;
     align-items: center;
     height: var(--navbar-height);
-    transition: 0.8s;
+    transition: 0.50s;
     z-index: 10000;
 }
 
@@ -46,6 +47,9 @@ CODE OF STICKY */
     background-color: white;
     font-size: 1.25rem;
 }
+#navbar.sticky ul li a{
+    color: white;
+}
 
 
 
@@ -56,7 +60,7 @@ CODE OF STICKY */
     align-items: center;
 }
 #logo h3{
-    font-family: 'Pangolin', cursive;
+    font-family: var(--font-fancy-2);
 }
 #logo img{
     height: 60px;
@@ -96,80 +100,185 @@ CODE OF STICKY */
    font-size: 1.25rem;
 }
 
+
+/* SIGNUP button CSS */
 #signup{
     position: absolute;
     right: 20px;
-    font-size: 1.1rem;
+    /* color: rgb(0, 0, 0); */
+}
+#signup ul li a{
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+#signup ul li a:hover{
+    color: rgb(255, 255, 255);
 }
 
 
 
 /* Main Section */
-.background{
+.background, .cards{
     display: flex;
     width: 100%;
-    height: 200vh;
+    height: 100vh;  /*height of the main page  */
     background: url('../img/bg2.jpg') no-repeat center;
     background-size: cover;
 }
-.background .headline h1{
+
+/* HeadLine Text Animation */
+.ml2 {
+    font-weight: 900;
+    font-size: 4.5em;
     position: absolute;
-    top: 40vh;
-    margin-left: 50px;
-    font-size: 4.5rem;
-    font-family: var(--font-fancy-1);
-    animation: heading 1 ease-in 1s;
+    top: 35vh;
+    padding-left: 2em;
+    text-shadow: 2px 2px 5px #addad2;
+  }
+  
+.ml2 .letter {
+    display: inline-block;
+    line-height: 1em;
 }
 
-.background .headline h4{
+/* user choice form for playing user want song playlist */
+.user-choice{
+    width: 30%;
+    height: 50%;
     position: absolute;
-    top: 55vh;
-    margin-left: 250px;
-    font-size: 1.5rem;
-    font-family: var(--font-fancy-1);
+    top: 25%;
+    right: 5%;
+    /* border: 2px solid red; */
+}
+
+.user{
+    margin: 2px;
+    padding: 5px;
+}
+.user p{
+  color: white;
+  font-family: var(--font-fancy-1);
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 5px red;
+}
+.user p:nth-child(even){
+    color: red;
+}
+
+/* styling the input form */
+#select{
+    margin-top: 25px;
+    width: 300px;
+    height: 30px;
+    padding: 7px;
+    background: none;
+}
+#submit{
+    margin-top: 25px;
+    /* width: 300px; */
+    height: 30px;
+    padding: 7px;
+    background: none;
 }
 
 
 /* Card Section styling */
+.cards{
+    background: black;
+    min-height: 1000px;
+    max-width: 100%;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+/* Defining card min dimantion */
+.card-dim{
+    width: 300px;
+    height: 300px;
+    margin: 0px 30px;
+    padding: 2px;
+}
 #card1{
-    width: 33%;
-    height: 200px;
-    margin: 95px 20px;
     padding: 20px;
     border-radius: 25px;
     background: url('../img/bg1.jpg') no-repeat;
+    background-blend-mode: darken;
     background-size: cover;
     box-shadow: 10px 10px 40px rgb(48, 44, 44);
     position: relative;
 }
-/* #tag1 h3{
-    text-align: center; 
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -25px 0 0 -25px;
-} */
 #card2{
-    width: 33%;
-    height: 200px;
-    /* border: 2px solid red; */
-    margin: 95px 20px;
     padding: 20px;
     border-radius: 25px;
     background: url('../img/bg3.jpg') no-repeat;
     background-size: cover;
     box-shadow: 10px 10px 40px rgb(48, 44, 44);
+    position: relative;
 }
 #card3{
-    width: 33%;
-    height: 200px;
-    /* border: 2px solid red; */
-    margin: 95px 20px;
     padding: 20px;
     border-radius: 25px;
     background: url('../img/bg4.jpg') no-repeat;
     background-size: cover;
     box-shadow: 10px 10px 40px rgb(48, 44, 44);
+    position: relative;
 }
+#card4{
+    padding: 20px;
+    border-radius: 25px;
+    background: url('../img/bg5.jpg') no-repeat;
+    background-size: cover;
+    box-shadow: 10px 10px 40px rgb(48, 44, 44);
+    position: relative;
+}
+#card5{
+    padding: 20px;
+    border-radius: 25px;
+    background: url('https://source.unsplash.com/300x300/?music') no-repeat;
+    background-size: cover;
+    box-shadow: 10px 10px 40px rgb(48, 44, 44);
+    position: relative;
+}
+
+h1{
+    font-size: 45px;
+    position: absolute;
+    color: white;
+    padding: 20px 100px;
+    font-family: var(--font-fancy-2);
+}
+
+.card-dim p {
+    font-size: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%) translateY(-100%);
+    text-decoration: underline;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    text-shadow: 5px 5px 50px rgb(236, 105, 105);
+}
+
+/* Play button on the playlist cards */
+.play-button{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%);
+    margin: auto;
+}
+.play-button button{
+    background: #e7e7e7;
+    border-radius: 5px;
+}
+.play-button button:active{
+    background: black;
+}
+
+
+
+
+
+
