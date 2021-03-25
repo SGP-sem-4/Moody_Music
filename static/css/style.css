@@ -34,21 +34,23 @@
 CODE OF STICKY */
 #navbar.sticky{
     padding: 5px 100px;
-    background: #000;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
 }
 #navbar.sticky al li a{
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 #navbar.sticky #logo h3{
-    color: white;
+    color: rgb(0, 0, 0);
 }
 #navbar.sticky ul li a:hover{
     color: black;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     font-size: 1.25rem;
 }
 #navbar.sticky ul li a{
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 
